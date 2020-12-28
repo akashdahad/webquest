@@ -1,0 +1,71 @@
+
+
+
+
+<style>
+        li{
+            padding-left:10px;
+        }
+    
+        li a{
+            color:white!important;
+            font-family: 'Raleway', sans-serif;
+        }
+    
+        .current{
+            font-size: 100%;
+            /* -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); */
+        }
+    
+        .navbar{
+          background-color:black;
+          padding:30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top  rounded">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+              <ul class="navbar-nav">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="logout.php"> Logout   </a>
+                </li>
+                
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link " href="logout.php" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Logout </a>
+                </li> -->
+              </ul>
+            </div>
+             <div  style="color:white;" id="txt"></div>
+          </nav>
+            
+        
+      
+          <script>
+            startTime();
+            
+            function startTime() {
+              console.log('^&^&&^');
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
